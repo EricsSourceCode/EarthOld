@@ -1,0 +1,8 @@
+buildfile	\Eric\ClimateModel\BuildProj.bat
+executablefile	\Eric\ClimateModel\bin\Release\ClimateModel.exe
+projectdirectory	\Eric\ClimateModel
+recentfile1	\Eric\ClimateModel\MainForm.cs
+recentfile2	\Eric\ClimateModel\SolarSystem.cs
+recentfile3	\Eric\ClimateModel\ThreeDScene.cs
+recentfile4	\Eric\Main\Docs\Notes.txt
+recentfile5	\Eric\ClimateModel\EarthGeoid.cs
