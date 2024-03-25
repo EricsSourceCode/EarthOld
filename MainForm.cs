@@ -1,4 +1,4 @@
-// Copyright Eric Chauvin 2018 - 2023.
+// Copyright Eric Chauvin 2018 - 2024.
 
 
 
@@ -30,7 +30,7 @@ namespace ClimateModel
   public partial class MainForm : Form
   {
   internal const string VersionDate =
-                               "3/12/2024";
+                               "3/25/2024";
   internal const int VersionNumber = 09; // 0.9
   private System.Threading.Mutex SingleInstanceMutex = null;
   // private bool IsSingleInstance = false;
