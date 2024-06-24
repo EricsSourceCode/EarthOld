@@ -1,4 +1,4 @@
-// Copyright Eric Chauvin 2018 - 2023.
+// Copyright Eric Chauvin 2018 - 2024.
 
 
 
@@ -344,19 +344,16 @@ namespace ClimateModel
     Vector3.Vector Pos =
                   SolarS.GetEarthScaledPosition();
 
-    // Spring Equinox 2021 in Northern Hemisphere
-    // will be at 2:37 AM on
-    // Saturday, March 20
-    // Mountain Standard Time.
-    // Positive X direction is toward the sun (from Earth)
+    // Positive X direction is toward the sun
+    // (from Earth)
     // on the day of Spring Equinox.
     // So LookAt direction of -X means from the
     // sun toward the Earth on Spring Equinox.
     SetCameraTo( Pos.X,
                  Pos.Y,
                  Pos.Z,
-                     -1,  // LookAt vector.
-                     0,
+                     0,  // LookAt vector.
+                    -1,
                      0,
                      0, // Up vector.
                      0,

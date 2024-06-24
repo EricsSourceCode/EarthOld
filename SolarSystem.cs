@@ -98,6 +98,7 @@ namespace ClimateModel
   private PlanetSphere MoonSmall;
   private PlanetSphere JupiterSmall;
   private PlanetSphere MarsSmall;
+  private PlanetSphere VenusSmall;
   private EarthGeoid Earth;
   private PlanetSphere Moon;
   // private PlanetSphere SpaceStation;
@@ -177,39 +178,40 @@ namespace ClimateModel
     try
     {
     // Sun:
-    string JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLSun.txt";
+    string JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLSun.txt";
     Sun = new PlanetSphere( MForm, "Sun", JPLFileName );
     Sun.Radius = 695700 * ModelConstants.TenTo3;
     Sun.Mass = ModelConstants.MassOfSun;
-    Sun.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\sun.jpg";
+    Sun.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\sun.jpg";
     AddSpaceObject( Sun );
 
     // Earth:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLEarth.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLEarth.txt";
     Earth = new EarthGeoid( MForm, "Earth", JPLFileName );
     Earth.Mass = ModelConstants.MassOfEarth;
-    Earth.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\earth.jpg";
+    Earth.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\earth.jpg";
     AddSpaceObject( Earth );
 
     // Moon:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLMoon.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLMoon.txt";
     Moon = new PlanetSphere( MForm, "Moon", JPLFileName );
     // Radius: About 1,737.1 kilometers.
     Moon.Radius = 1737100;
     Moon.Mass = ModelConstants.MassOfMoon;
-    Moon.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\moon.jpg";
+    Moon.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\moon.jpg";
     AddSpaceObject( Moon );
 
     // Space Station:
     // Both Earth and the Space Station need to be
     // using the same time intervals for the JPL
     // data.
-    // JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLSpaceStation.txt";
+    // JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLSpaceStation.txt";
     // SpaceStation = new PlanetSphere( MForm, "Space Station", false, JPLFileName );
     // It's about 418 kilometers above the Earth.
     // SpaceStation.Radius = 400000; // 418000;
     // SpaceStation.Mass = 1.0;
-    // SpaceStation.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\TestImage2.jpg";
+    // SpaceStation.TextureFileName =
+         // "C:\\Eric\\ClimateModel\\bin\\Release\\TestImage2.jpg";
     // AddSpaceObject( SpaceStation );
 
 /*
@@ -220,61 +222,61 @@ Earth rotation angle and all that.
     Leadville = new PlanetSphere( MForm, "Leadville", false, JPLFileName );
     Leadville.Radius = 1000000;
     Leadville.Mass = 0;
-    Leadville.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\TestImage.jpg";
+    Leadville.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\TestImage.jpg";
     AddSpaceObject( Leadville );
 */
 
     // Mercury:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLMercury.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLMercury.txt";
     PlanetSphere Mercury = new PlanetSphere(
               MForm, "Mercury", JPLFileName );
 
     Mercury.Radius = 2440000d * RadiusScale;
     Mercury.Mass = ModelConstants.MassOfMercury;
-    Mercury.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Mercury.jpg";
+    Mercury.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\Mercury.jpg";
     AddSpaceObject( Mercury );
 
     // Venus:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLVenus.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLVenus.txt";
     PlanetSphere Venus = new PlanetSphere(
                 MForm, "Venus", JPLFileName );
 
     Venus.Radius = 6051000 * RadiusScale; // 6,051 km
     Venus.Mass = ModelConstants.MassOfVenus;
-    Venus.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Venus.jpg";
+    Venus.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\Venus.jpg";
     AddSpaceObject( Venus );
 
     // Mars:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLMars.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLMars.txt";
     PlanetSphere Mars = new PlanetSphere(
                  MForm, "Mars", JPLFileName );
 
     Mars.Radius = 3396000 * RadiusScale;
     Mars.Mass = ModelConstants.MassOfMars;
-    Mars.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\mars.jpg";
+    Mars.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\mars.jpg";
     AddSpaceObject( Mars );
 
 
     // Jupiter:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLJupiter.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLJupiter.txt";
     PlanetSphere Jupiter = new PlanetSphere(
               MForm, "Jupiter", JPLFileName );
 
     //                m  t
     Jupiter.Radius = 69911000d * RadiusScale; // 69,911 km
     Jupiter.Mass = ModelConstants.MassOfJupiter;
-    Jupiter.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Jupiter.jpg";
+    Jupiter.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\Jupiter.jpg";
     AddSpaceObject( Jupiter );
 
     // Saturn:
-    JPLFileName = "C:\\Eric\\Main\\ClimateModel\\EphemerisData\\JPLSaturn.txt";
+    JPLFileName = "C:\\Eric\\ClimateModel\\EphemerisData\\JPLSaturn.txt";
     PlanetSphere Saturn = new PlanetSphere(
                 MForm, "Saturn", JPLFileName );
 
     //               m  t
     Saturn.Radius = 58232000d * RadiusScale; // 58,232 km
     Saturn.Mass = ModelConstants.MassOfSaturn;
-    Saturn.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Saturn.jpg";
+    Saturn.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\Saturn.jpg";
     AddSpaceObject( Saturn );
 
     // North Pole:
@@ -283,7 +285,7 @@ Earth rotation angle and all that.
 
     NorthPole.Radius = 400000d;
     NorthPole.Mass = 0;
-    NorthPole.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\TestImage2.jpg";
+    NorthPole.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\TestImage2.jpg";
     AddSpaceObject( NorthPole );
 
     // Moon Axis:
@@ -293,7 +295,7 @@ Earth rotation angle and all that.
     MoonAxis.Radius = 300000d;
     MoonAxis.Mass = 0;
     MoonAxis.TextureFileName =
-         "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\moon.jpg";
+         "C:\\Eric\\ClimateModel\\bin\\Release\\moon.jpg";
     AddSpaceObject( MoonAxis );
 
 
@@ -303,7 +305,7 @@ Earth rotation angle and all that.
 
     SolarNorth.Radius = 100000d;
     SolarNorth.Mass = 0;
-    SolarNorth.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\TestImage2.jpg";
+    SolarNorth.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\TestImage2.jpg";
     AddSpaceObject( SolarNorth );
 
     // Sun Vector:
@@ -312,7 +314,7 @@ Earth rotation angle and all that.
 
     SunSmall.Radius = 500000d;
     SunSmall.Mass = 0;
-    SunSmall.TextureFileName = "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Sun.jpg";
+    SunSmall.TextureFileName = "C:\\Eric\\ClimateModel\\bin\\Release\\Sun.jpg";
     AddSpaceObject( SunSmall );
 
     // Moon Vector:
@@ -322,7 +324,7 @@ Earth rotation angle and all that.
     MoonSmall.Radius = 400000d;
     MoonSmall.Mass = 0;
     MoonSmall.TextureFileName =
-    "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Moon.jpg";
+    "C:\\Eric\\ClimateModel\\bin\\Release\\Moon.jpg";
     AddSpaceObject( MoonSmall );
 
 
@@ -333,7 +335,7 @@ Earth rotation angle and all that.
     JupiterSmall.Radius = 400000d;
     JupiterSmall.Mass = 0;
     JupiterSmall.TextureFileName =
-    "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Jupiter.jpg";
+    "C:\\Eric\\ClimateModel\\bin\\Release\\Jupiter.jpg";
     AddSpaceObject( JupiterSmall );
 
 
@@ -344,8 +346,22 @@ Earth rotation angle and all that.
     MarsSmall.Radius = 300000d;
     MarsSmall.Mass = 0;
     MarsSmall.TextureFileName =
-    "C:\\Eric\\Main\\ClimateModel\\bin\\Release\\Mars.jpg";
+    "C:\\Eric\\ClimateModel\\bin\\Release\\Mars.jpg";
     AddSpaceObject( MarsSmall );
+
+
+    // Venus Vector:
+    VenusSmall = new PlanetSphere(
+                MForm, "Venus Small", "" );
+
+    VenusSmall.Radius = 300000d;
+    VenusSmall.Mass = 0;
+    VenusSmall.TextureFileName =
+    "C:\\Eric\\ClimateModel\\bin\\" +
+              "Release\\Venus.jpg";
+    AddSpaceObject( VenusSmall );
+
+
 
     ///////////////////////////////////
     // Set the positions of the objects from the JPL data.
@@ -522,6 +538,32 @@ Earth rotation angle and all that.
                               Earth.Position );
 
     MarsSmall.Position = MarsVector;
+
+
+    // For VenusSmall:
+    Vector3.Vector VenusVector = Earth.Position;
+
+    // Make a vector that goes from the Earth to
+    // the center of the coordinate system.
+    VenusVector = Vector3.Negate( VenusVector );
+
+    // Add the vector from the center of the
+    // coordinate system to Venus.
+    VenusVector = Vector3.Add( VenusVector,
+                              Venus.Position );
+
+    // This is now the vector from the Earth to
+    // Venus.
+    VenusVector = Vector3.Normalize( VenusVector );
+    VenusVector = Vector3.MultiplyWithScalar(
+              VenusVector,
+              ModelConstants.EarthRadiusMajor +
+              VenusSmall.Radius );
+
+    VenusVector = Vector3.Add( VenusVector,
+                              Earth.Position );
+
+    VenusSmall.Position = VenusVector;
 
     }
     catch( Exception Except )

@@ -1,19 +1,20 @@
 // Copyright Eric Chauvin 2019 - 2024.
 
 
+
 // This is licensed under the GNU General
 // Public License (GPL).  It is the
 // same license that Linux has.
 // https://www.gnu.org/licenses/gpl-3.0.html
 
-=====
+
+// Data goes to April 2027.
+
 
 // Get ephemeris data from:
 // JPL Horizons:
 // https://ssd.jpl.nasa.gov/horizons.cgi
 
-// JPL news:
-// https://ssd.jpl.nasa.gov/?horizons_news
 
 // Use settings like this:
 // Ephemeris Type: VECTORS
@@ -59,9 +60,9 @@ namespace ClimateModel
     public double VelocityX; // VX,
     public double VelocityY; // VY,
     public double VelocityZ; // VZ,
-    public double LightTime; //  LT
-    public double Range;   //  RG Range
-    public double RangeRate; //  RR Range-rate
+    // public double LightTime; //  LT
+    // public double Range;   //  RG Range
+    // public double RangeRate; //  RR Range-rate
     }
 
 
@@ -145,7 +146,7 @@ namespace ClimateModel
 
         string[] SplitS = Line.Split( new Char[] { ',' } );
 
-        if( SplitS.Length < 11 )
+        if( SplitS.Length < 8 )
           continue;
 
         Rec.JulianDayNumber = GetDoubleValue( SplitS[0].Trim());
@@ -170,13 +171,13 @@ namespace ClimateModel
         Rec.VelocityZ = GetDoubleValue( SplitS[7].Trim());
         Rec.VelocityZ *= 1000.0d;
 
-        Rec.LightTime = GetDoubleValue( SplitS[8].Trim());
+        // Rec.LightTime = GetDoubleValue( SplitS[8].Trim());
 
-        Rec.Range = GetDoubleValue( SplitS[9].Trim());
-        Rec.Range *= 1000.0d;
+        // Rec.Range = GetDoubleValue( SplitS[9].Trim());
+        // Rec.Range *= 1000.0d;
 
-        Rec.RangeRate = GetDoubleValue( SplitS[10].Trim());
-        Rec.RangeRate *= 1000.0d;
+        // Rec.RangeRate = GetDoubleValue( SplitS[10].Trim());
+        // Rec.RangeRate *= 1000.0d;
 
         AddJPLRec( Rec );
         }

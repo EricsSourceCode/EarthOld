@@ -30,7 +30,7 @@ namespace ClimateModel
   public partial class MainForm : Form
   {
   internal const string VersionDate =
-                               "3/25/2024";
+                               "6/24/2024";
   internal const int VersionNumber = 09; // 0.9
   private System.Threading.Mutex SingleInstanceMutex = null;
   // private bool IsSingleInstance = false;
@@ -41,8 +41,10 @@ namespace ClimateModel
   // private ConfigureFile ConfigFile;
   private ThreeDForm ThreeDF;
   private MenuEvents MEvents;
+
   // System.Windows.Forms.
   private TextBox MainTextBox;
+
   private System.Windows.Forms.Timer SingleInstanceTimer;
 
 
@@ -62,7 +64,7 @@ namespace ClimateModel
     SetupDirectories();
 
 
-    ShowStatus( "Version Date now: " + VersionDate );
+    ShowStatus( "Version Date: " + VersionDate );
     // ShowStatus( "ThreeDScene.MoveToEarthView() is" );
     // ShowStatus( "set to -x, 0, 0." );
     // ShowStatus( "That points from the sun to the earth" );
