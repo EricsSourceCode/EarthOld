@@ -30,7 +30,7 @@ namespace ClimateModel
   public partial class MainForm : Form
   {
   internal const string VersionDate =
-                               "6/24/2024";
+                               "8/15/2024";
   internal const int VersionNumber = 09; // 0.9
   private System.Threading.Mutex SingleInstanceMutex = null;
   // private bool IsSingleInstance = false;
