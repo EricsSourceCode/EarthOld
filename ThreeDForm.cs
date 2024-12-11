@@ -259,7 +259,8 @@ namespace ClimateModel
         return;
         }
 
-      if( e.KeyCode == Keys.E )
+// Now called Default View.
+      if( e.KeyCode == Keys.D )
         {
         Scene.MoveToEarthView();
         return;

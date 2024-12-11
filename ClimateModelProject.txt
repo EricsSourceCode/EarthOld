@@ -8,3 +8,5 @@ recentfile4	\Eric\ClimateModel\ClimateModel2.csproj
 recentfile5	\Eric\ClimateModel\ThreeDScene.cs
 recentfile6	\Eric\ClimateModel\JPLHorizonsData.cs
 recentfile7	\Eric\ClimateModel\SolarSystem.cs
+recentfile8	\Eric\ClimateModel\ThreeDForm.cs
+recentfile9	\Eric\ClimateModel\PlanetSphere.cs
